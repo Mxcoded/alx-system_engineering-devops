@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Reloads Gunicorn upon server restart
+
+pgrep gunicorn | awk '{ print $2 }' | xargs kill -HUP
